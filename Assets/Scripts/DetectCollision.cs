@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
@@ -9,13 +7,10 @@ public class DetectCollision : MonoBehaviour
     {
         gamingManager = GameObject.Find("GamingManager").GetComponent<GamingManager>();
     }
-    void Update()
-    {
-        
-    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (GamingManager.gameContinue)
+        if (GamingManager.GameContinue)
         {
             if (other.CompareTag("Player"))
             {

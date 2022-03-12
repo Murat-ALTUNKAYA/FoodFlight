@@ -1,25 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float horizontalInput;
-    public float speed = 15.0f;
-    private float xRange = 15.0f;
-
-    private float zMin = -1.5f;
-    private float zMax = 15.5f;
-    private float verticalInput;
+    private float horizontalInput, verticalInput;
+    public float Speed = 15.0f;
+    private float xRange = 15.0f, zMin = -1.5f, zMax = 15.5f;
 
     public GameObject projectilePrefab;
-    void Start()
-    {
 
-    }
     void Update()
     {
-        if (GamingManager.gameContinue)
+        if (GamingManager.GameContinue)
         {
             Movement();
         }        
@@ -47,8 +38,8 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * Speed);
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * Speed);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);

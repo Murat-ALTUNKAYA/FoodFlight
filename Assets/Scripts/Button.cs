@@ -1,23 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
-    public Text tbr, score2;
-    void Start()
+    public GameObject button;
+    public Text ScoreText;
+
+    private void Update()
     {
-        
+        if (!GamingManager.GameContinue)
+        {
+            button.SetActive(true);
+            ScoreText.text = "Score : " + GamingManager.score + "";
+        }
     }
 
-    void Update()
-    {
 
-    }
-    public void Restart()
+    public void RestartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        GamingManager.GameContinue = true;
+        button.SetActive(false);
     }
 }
