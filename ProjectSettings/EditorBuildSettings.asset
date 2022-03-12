@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainPage.unity
     guid: 7e9a7e2392229cd48982a74f5095b0da
+  - enabled: 1
+    path: Assets/Scenes/FoodFlight.unity
+    guid: f0196d95ff9244ffaa65879ba7824fd4
   m_configObjects: {}
