@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 7399971718554970805}
   m_Layer: 0
   m_Name: Animal01 1
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e8dcf420af77640a5e6e63d7454073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
 --- !u!114 &-4167837873536846110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topBound: 40
-  loverBound: -10
+  loverBound: -2
 --- !u!65 &4648671916638198452
 BoxCollider:
   m_ObjectHideFlags: 0
